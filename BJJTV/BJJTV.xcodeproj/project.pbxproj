@@ -14,6 +14,12 @@
 		C91E5CB51EB7A4790083D1B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91E5CB31EB7A4790083D1B9 /* LaunchScreen.storyboard */; };
 		C91E5CC01EB7A4790083D1B9 /* BJJTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CBF1EB7A4790083D1B9 /* BJJTVTests.swift */; };
 		C91E5CCB1EB7A4790083D1B9 /* BJJTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CCA1EB7A4790083D1B9 /* BJJTVUITests.swift */; };
+		C91E5CDC1EB7B1380083D1B9 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = C91E5CDB1EB7B1380083D1B9 /* Assets */; };
+		C91E5CDD1EB7B1380083D1B9 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = C91E5CDB1EB7B1380083D1B9 /* Assets */; };
+		C91E5CDE1EB7B1380083D1B9 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = C91E5CDB1EB7B1380083D1B9 /* Assets */; };
+		C91E5CE11EB7B1D00083D1B9 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CE01EB7B1D00083D1B9 /* YTPlayerView.m */; };
+		C91E5CE21EB7B1D00083D1B9 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CE01EB7B1D00083D1B9 /* YTPlayerView.m */; };
+		C91E5CE31EB7B1D00083D1B9 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CE01EB7B1D00083D1B9 /* YTPlayerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,10 @@
 		C91E5CC61EB7A4790083D1B9 /* BJJTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BJJTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91E5CCA1EB7A4790083D1B9 /* BJJTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJJTVUITests.swift; sourceTree = "<group>"; };
 		C91E5CCC1EB7A4790083D1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C91E5CDA1EB7AF350083D1B9 /* BJJTV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BJJTV-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		C91E5CDB1EB7B1380083D1B9 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		C91E5CDF1EB7B1D00083D1B9 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
+		C91E5CE01EB7B1D00083D1B9 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +107,13 @@
 		C91E5CA91EB7A4780083D1B9 /* BJJTV */ = {
 			isa = PBXGroup;
 			children = (
+				C91E5CDA1EB7AF350083D1B9 /* BJJTV-Bridging-Header.h */,
+				C91E5CDB1EB7B1380083D1B9 /* Assets */,
 				C91E5CAA1EB7A4780083D1B9 /* AppDelegate.swift */,
 				C91E5CAC1EB7A4780083D1B9 /* ViewController.swift */,
 				C91E5CAE1EB7A4790083D1B9 /* Main.storyboard */,
+				C91E5CDF1EB7B1D00083D1B9 /* YTPlayerView.h */,
+				C91E5CE01EB7B1D00083D1B9 /* YTPlayerView.m */,
 				C91E5CB11EB7A4790083D1B9 /* Assets.xcassets */,
 				C91E5CB31EB7A4790083D1B9 /* LaunchScreen.storyboard */,
 				C91E5CB61EB7A4790083D1B9 /* Info.plist */,
@@ -199,12 +213,14 @@
 					C91E5CBA1EB7A4790083D1B9 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = GUY34L2LLG;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C91E5CA61EB7A4780083D1B9;
 					};
 					C91E5CC51EB7A4790083D1B9 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = GUY34L2LLG;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C91E5CA61EB7A4780083D1B9;
 					};
@@ -236,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91E5CB51EB7A4790083D1B9 /* LaunchScreen.storyboard in Resources */,
+				C91E5CDC1EB7B1380083D1B9 /* Assets in Resources */,
 				C91E5CB21EB7A4790083D1B9 /* Assets.xcassets in Resources */,
 				C91E5CB01EB7A4790083D1B9 /* Main.storyboard in Resources */,
 			);
@@ -245,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91E5CDD1EB7B1380083D1B9 /* Assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91E5CDE1EB7B1380083D1B9 /* Assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +283,7 @@
 			files = (
 				C91E5CAD1EB7A4780083D1B9 /* ViewController.swift in Sources */,
 				C91E5CAB1EB7A4780083D1B9 /* AppDelegate.swift in Sources */,
+				C91E5CE11EB7B1D00083D1B9 /* YTPlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91E5CE21EB7B1D00083D1B9 /* YTPlayerView.m in Sources */,
 				C91E5CC01EB7A4790083D1B9 /* BJJTVTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91E5CE31EB7B1D00083D1B9 /* YTPlayerView.m in Sources */,
 				C91E5CCB1EB7A4790083D1B9 /* BJJTVUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +444,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benrussell.BJJTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BJJTV/BJJTV-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -435,6 +458,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benrussell.BJJTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BJJTV/BJJTV-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -444,11 +468,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = GUY34L2LLG;
 				INFOPLIST_FILE = BJJTVTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benrussell.BJJTVTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BJJTV.app/BJJTV";
 			};
@@ -459,6 +485,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = GUY34L2LLG;
 				INFOPLIST_FILE = BJJTVTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -473,11 +500,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = GUY34L2LLG;
 				INFOPLIST_FILE = BJJTVUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benrussell.BJJTVUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = BJJTV;
 			};
@@ -487,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = GUY34L2LLG;
 				INFOPLIST_FILE = BJJTVUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
