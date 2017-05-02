@@ -23,6 +23,9 @@
 		C91E5CE51EB7B9190083D1B9 /* BJJTVServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CE41EB7B9190083D1B9 /* BJJTVServiceController.swift */; };
 		C91E5CE61EB7B9190083D1B9 /* BJJTVServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CE41EB7B9190083D1B9 /* BJJTVServiceController.swift */; };
 		C91E5CE71EB7B9190083D1B9 /* BJJTVServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CE41EB7B9190083D1B9 /* BJJTVServiceController.swift */; };
+		C91E5CE91EB9228B0083D1B9 /* BJJTVVideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CE81EB9228B0083D1B9 /* BJJTVVideoListViewController.swift */; };
+		C91E5CEA1EB9228B0083D1B9 /* BJJTVVideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CE81EB9228B0083D1B9 /* BJJTVVideoListViewController.swift */; };
+		C91E5CEB1EB9228B0083D1B9 /* BJJTVVideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CE81EB9228B0083D1B9 /* BJJTVVideoListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,7 @@
 		C91E5CDF1EB7B1D00083D1B9 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		C91E5CE01EB7B1D00083D1B9 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 		C91E5CE41EB7B9190083D1B9 /* BJJTVServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJJTVServiceController.swift; sourceTree = "<group>"; };
+		C91E5CE81EB9228B0083D1B9 /* BJJTVVideoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJJTVVideoListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +119,9 @@
 				C91E5CDB1EB7B1380083D1B9 /* Assets */,
 				C91E5CAA1EB7A4780083D1B9 /* AppDelegate.swift */,
 				C91E5CAC1EB7A4780083D1B9 /* ViewController.swift */,
-				C91E5CAE1EB7A4790083D1B9 /* Main.storyboard */,
+				C91E5CE81EB9228B0083D1B9 /* BJJTVVideoListViewController.swift */,
 				C91E5CE41EB7B9190083D1B9 /* BJJTVServiceController.swift */,
+				C91E5CAE1EB7A4790083D1B9 /* Main.storyboard */,
 				C91E5CDF1EB7B1D00083D1B9 /* YTPlayerView.h */,
 				C91E5CE01EB7B1D00083D1B9 /* YTPlayerView.m */,
 				C91E5CB11EB7A4790083D1B9 /* Assets.xcassets */,
@@ -289,6 +294,7 @@
 				C91E5CE51EB7B9190083D1B9 /* BJJTVServiceController.swift in Sources */,
 				C91E5CAD1EB7A4780083D1B9 /* ViewController.swift in Sources */,
 				C91E5CAB1EB7A4780083D1B9 /* AppDelegate.swift in Sources */,
+				C91E5CE91EB9228B0083D1B9 /* BJJTVVideoListViewController.swift in Sources */,
 				C91E5CE11EB7B1D00083D1B9 /* YTPlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +306,7 @@
 				C91E5CE21EB7B1D00083D1B9 /* YTPlayerView.m in Sources */,
 				C91E5CE61EB7B9190083D1B9 /* BJJTVServiceController.swift in Sources */,
 				C91E5CC01EB7A4790083D1B9 /* BJJTVTests.swift in Sources */,
+				C91E5CEA1EB9228B0083D1B9 /* BJJTVVideoListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +317,7 @@
 				C91E5CE31EB7B1D00083D1B9 /* YTPlayerView.m in Sources */,
 				C91E5CE71EB7B9190083D1B9 /* BJJTVServiceController.swift in Sources */,
 				C91E5CCB1EB7A4790083D1B9 /* BJJTVUITests.swift in Sources */,
+				C91E5CEB1EB9228B0083D1B9 /* BJJTVVideoListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

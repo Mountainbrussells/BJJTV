@@ -10,10 +10,17 @@ import Foundation
 
 class BJJTVServiceController: NSObject {
     var apiKey = "AIzaSyAS0nysNf7f1gB3WCOnAPd_aJ7uTlCJHoM"
-    var desiredChannelsArray = ["GracieBreakdown"]
+    var desiredChannelsArray = ["GracieBreakdown", "chewybjj", "ralphgracie", "GracieAcademy", "Budovideosdotcom", "jjitsubrotherhood", "StephanKesting"]
     var channelIndex = 0
     var videosArray: Array<Dictionary<String, AnyObject>> = []
     var channelsDataArray: Array<Dictionary<String, AnyObject>> = []
+    
+    class var sharedInstance : BJJTVServiceController {
+        struct Static {
+            static let instance : BJJTVServiceController = BJJTVServiceController()
+        }
+        return Static.instance
+    }
     
     func performGetRequest(targetURL: URL!, completion: @escaping (_ data: Data?, _ HTTPStatusCode: Int, _ error: Error?) -> Void) {
         var request = URLRequest(url: targetURL)

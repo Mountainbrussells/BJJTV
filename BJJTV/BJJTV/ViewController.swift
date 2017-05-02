@@ -12,15 +12,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     
-    let serviceController = BJJTVServiceController()
+    let serviceController = BJJTVServiceController.sharedInstance
+    var selectedIndex: Int!
+    var destinationVC: BJJTVVideoListViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
         serviceController.getChannelDetails(false)
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.refreshData), name: Notification.Name("RefreshTableView"), object: nil)
+        
 
     }
 
@@ -36,26 +38,39 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell!
         cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath)
-
+        
         let channelDescriptionLabel = cell.viewWithTag(11) as! UILabel
         let thumbnailImageView = cell.viewWithTag(12) as! UIImageView
         
         let channelDetails = serviceController.channelsDataArray[indexPath.row]
         
-        channelDescriptionLabel.text = channelDetails["description"] as? String
-        
+        channelDescriptionLabel.text = channelDetails["title"] as? String
+        // Update to swift 3
         let thumbnailImageString = channelDetails["thumbnail"] as? String
         let loadedImageData = NSData(contentsOf: URL(string: thumbnailImageString!)!)
         if let imageData = loadedImageData {
             thumbnailImageView.image = UIImage(data: imageData as Data)
         }
-
+        
         
         return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        destinationVC.selectedIndex = indexPath.row
+        
     }
     
     func refreshData() {
         self.tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showVideosView" {
+            destinationVC = segue.destination as! BJJTVVideoListViewController
+        }
     }
 
 }
