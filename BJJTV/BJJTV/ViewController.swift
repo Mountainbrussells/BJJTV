@@ -22,7 +22,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         serviceController.getChannelDetails(false)
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.refreshData), name: Notification.Name("RefreshTableView"), object: nil)
-        
+        navigationController?.navigationBar.barTintColor = UIColor.brown
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orange]
+        navigationController?.navigationBar.tintColor = UIColor.orange;
 
     }
 
@@ -39,8 +41,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var cell: UITableViewCell!
         cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath)
         
+        cell.backgroundView = UIImageView(image: UIImage(named: "blackbelt.png"))
+       
+        
         let channelDescriptionLabel = cell.viewWithTag(11) as! UILabel
+        channelDescriptionLabel.layer.cornerRadius = 10
+        channelDescriptionLabel.clipsToBounds = true
         let thumbnailImageView = cell.viewWithTag(12) as! UIImageView
+        thumbnailImageView.layer.cornerRadius = 20
+        thumbnailImageView.clipsToBounds = true
         
         let channelDetails = serviceController.channelsDataArray[indexPath.row]
         

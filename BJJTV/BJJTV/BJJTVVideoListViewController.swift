@@ -57,10 +57,22 @@ class BJJTVVideoListViewController: UIViewController, UITableViewDataSource, UIT
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedIndex = indexPath.row
+        performSegue(withIdentifier: "playVideoSegue", sender: self)
+        
+    }
+    
     func refreshData() {
         self.tableView.reloadData()
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "playVideoSegue" {
+            let playerViewController = segue.destination as! BJJTVVideoViewController
+            playerViewController.videoID = serviceController.videosArray[selectedIndex]["videoID"] as! String
+        }
+    }
     
 }
