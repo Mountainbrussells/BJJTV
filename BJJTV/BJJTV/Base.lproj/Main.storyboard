@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="154"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BPd-kE-uNJ" id="2SA-Vn-a3o">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="153.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xxa-h5-p9a">
@@ -61,9 +61,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vn-iU-gdN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Fem-sh-qz2">
+                                        <rect key="frame" x="169" y="283" width="37" height="37"/>
+                                        <color key="color" red="0.35706910060000002" green="0.33117731820000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Fem-sh-qz2" firstAttribute="centerY" secondItem="2Vn-iU-gdN" secondAttribute="centerY" id="UUd-Hg-cyg"/>
+                                    <constraint firstItem="Fem-sh-qz2" firstAttribute="centerX" secondItem="2Vn-iU-gdN" secondAttribute="centerX" id="hWE-67-BV9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="2Vn-iU-gdN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3ay-qR-Qj5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Vn-iU-gdN" secondAttribute="bottom" id="Afz-Uc-dDv"/>
+                            <constraint firstAttribute="trailing" secondItem="2Vn-iU-gdN" secondAttribute="trailing" id="KTg-7A-JGb"/>
+                            <constraint firstItem="2Vn-iU-gdN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bqF-HL-31g"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zrl-8c-eLM" secondAttribute="bottom" id="gUF-Y9-2eS"/>
                             <constraint firstAttribute="trailing" secondItem="zrl-8c-eLM" secondAttribute="trailing" id="nUZ-bM-9md"/>
                             <constraint firstItem="zrl-8c-eLM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nqZ-kQ-2DX"/>
@@ -73,6 +91,7 @@
                     <navigationItem key="navigationItem" title="BJJTV" id="Dia-H3-TE5"/>
                     <connections>
                         <outlet property="tableView" destination="zrl-8c-eLM" id="09L-6h-uO6"/>
+                        <outlet property="viewWait" destination="2Vn-iU-gdN" id="OKt-ZR-SL9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -99,7 +118,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AQG-6b-Swx" id="YF9-f1-wah">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w5F-K7-vDI">
@@ -128,17 +147,37 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xhh-CK-ph3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="jZj-T1-iqp">
+                                        <rect key="frame" x="169" y="283" width="37" height="37"/>
+                                        <color key="color" red="0.35706910060000002" green="0.33117731820000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="jZj-T1-iqp" firstAttribute="centerX" secondItem="xhh-CK-ph3" secondAttribute="centerX" id="XFh-Py-jCS"/>
+                                    <constraint firstItem="jZj-T1-iqp" firstAttribute="centerY" secondItem="xhh-CK-ph3" secondAttribute="centerY" id="iPK-6l-Pcd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xhh-CK-ph3" firstAttribute="top" secondItem="Mok-Nb-YLp" secondAttribute="bottom" id="4Yx-Ji-OII"/>
+                            <constraint firstItem="Smq-aZ-4mq" firstAttribute="top" secondItem="p3W-Jn-m0A" secondAttribute="bottom" id="Az1-HA-G0N"/>
+                            <constraint firstItem="xhh-CK-ph3" firstAttribute="leading" secondItem="g55-Br-GEz" secondAttribute="leading" id="Sfm-63-sbZ"/>
+                            <constraint firstItem="p3W-Jn-m0A" firstAttribute="top" secondItem="g55-Br-GEz" secondAttribute="top" id="VXQ-wf-UPH"/>
                             <constraint firstItem="p3W-Jn-m0A" firstAttribute="leading" secondItem="g55-Br-GEz" secondAttribute="leading" id="f3b-R3-oIm"/>
-                            <constraint firstItem="p3W-Jn-m0A" firstAttribute="top" secondItem="g55-Br-GEz" secondAttribute="top" id="inm-AR-Ry6"/>
+                            <constraint firstItem="Smq-aZ-4mq" firstAttribute="top" secondItem="xhh-CK-ph3" secondAttribute="bottom" id="jqv-B5-yWY"/>
                             <constraint firstItem="Smq-aZ-4mq" firstAttribute="top" secondItem="p3W-Jn-m0A" secondAttribute="bottom" id="jrk-cz-k71"/>
+                            <constraint firstAttribute="trailing" secondItem="xhh-CK-ph3" secondAttribute="trailing" id="ohj-Cl-Jfd"/>
                             <constraint firstAttribute="trailing" secondItem="p3W-Jn-m0A" secondAttribute="trailing" id="p2J-0L-l0E"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="p3W-Jn-m0A" id="Bhb-AG-gh5"/>
+                        <outlet property="viewWait" destination="xhh-CK-ph3" id="Cg0-gb-XXW"/>
                         <segue destination="yI2-Xy-8TA" kind="show" identifier="playVideoSegue" id="XHo-ZV-rXd"/>
                     </connections>
                 </viewController>
@@ -158,13 +197,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HkD-qZ-N3S" customClass="YTPlayerView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkD-qZ-N3S" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qn5-4v-zOX" firstAttribute="top" secondItem="HkD-qZ-N3S" secondAttribute="bottom" id="HPV-28-54X"/>
+                            <constraint firstItem="HkD-qZ-N3S" firstAttribute="top" secondItem="3s5-JG-DZG" secondAttribute="top" id="PRJ-aV-Di4"/>
+                            <constraint firstAttribute="trailing" secondItem="HkD-qZ-N3S" secondAttribute="trailing" id="XA3-M1-jHC"/>
+                            <constraint firstItem="HkD-qZ-N3S" firstAttribute="leading" secondItem="3s5-JG-DZG" secondAttribute="leading" id="fkm-wl-slG"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="playerView" destination="HkD-qZ-N3S" id="UbE-vT-cJE"/>

@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var viewWait: UIView!
     
     let serviceController = BJJTVServiceController.sharedInstance
     var selectedIndex: Int!
@@ -21,7 +22,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         serviceController.getChannelDetails(false)
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.refreshData), name: Notification.Name("RefreshTableView"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.refreshData), name:
+            Notification.Name("RefreshTableView"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BJJTVVideoListViewController.hideSpinner), name: Notification.Name("HideSpinner"), object: nil)
         navigationController?.navigationBar.barTintColor = UIColor.brown
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orange]
         navigationController?.navigationBar.tintColor = UIColor.orange;
@@ -74,6 +77,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func refreshData() {
         self.tableView.reloadData()
+    }
+    
+    func hideSpinner() {
+        self.viewWait.isHidden = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

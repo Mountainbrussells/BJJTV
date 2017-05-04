@@ -11,6 +11,7 @@ import UIKit
 class BJJTVVideoListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var viewWait: UIView!
     let serviceController = BJJTVServiceController.sharedInstance
     var selectedIndex: Int!
     
@@ -21,6 +22,8 @@ class BJJTVVideoListViewController: UIViewController, UITableViewDataSource, UIT
         
        
         NotificationCenter.default.addObserver(self, selector: #selector(BJJTVVideoListViewController.refreshData), name: Notification.Name("RefreshTableView"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(BJJTVVideoListViewController.hideSpinner), name: Notification.Name("HideSpinner"), object: nil)
         
         // Remove all existing video details from the videosArray array.
         serviceController.videosArray.removeAll(keepingCapacity: false)
@@ -66,6 +69,10 @@ class BJJTVVideoListViewController: UIViewController, UITableViewDataSource, UIT
     
     func refreshData() {
         self.tableView.reloadData()
+    }
+    
+    func hideSpinner() {
+        self.viewWait.isHidden = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

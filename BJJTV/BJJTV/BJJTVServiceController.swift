@@ -86,7 +86,7 @@ class BJJTVServiceController: NSObject {
                                 self.getChannelDetails(useChannelIDParam)
                             }
                             else {
-                                // TODO: Hide spinner
+                                NotificationCenter.default.post(name: Notification.Name("HideSpinner"), object: nil)
                             }
                         }
                         
@@ -152,7 +152,7 @@ class BJJTVServiceController: NSObject {
                 print("Error while loading channel details: \(String(describing: error))")
             }
             
-            // TODO: Hide the activity indicator.
+            NotificationCenter.default.post(name: Notification.Name("HideSpinner"), object: nil)
         })
     }
 
