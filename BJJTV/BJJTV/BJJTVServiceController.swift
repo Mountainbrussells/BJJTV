@@ -110,7 +110,7 @@ class BJJTVServiceController: NSObject {
         let playlistID = channelsDataArray[index]["playlistID"] as! String
         
         // Form the request URL string.
-        let urlString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=\(playlistID)&key=\(apiKey)"
+        let urlString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=\(playlistID)&key=\(apiKey)&maxResults=20"
         
         // Create a NSURL object based on the above string.
         let targetURL = URL(string: urlString)
