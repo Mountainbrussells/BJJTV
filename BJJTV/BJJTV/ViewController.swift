@@ -21,13 +21,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        serviceController.getChannelDetails(false)
+        self.updateChannels()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.refreshData), name:
             Notification.Name("RefreshTableView"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(BJJTVVideoListViewController.hideSpinner), name: Notification.Name("HideSpinner"), object: nil)
-        navigationController?.navigationBar.barTintColor = UIColor.brown
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orange]
-        navigationController?.navigationBar.tintColor = UIColor.orange;
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationController?.navigationBar.tintColor = UIColor.white;
 
     }
 
@@ -77,6 +78,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         destinationVC.selectedIndex = indexPath.row
         
+    }
+    
+    func  updateChannels() {
+        serviceController.getChannelDetails(false, completion: { (error: Error?) -> Void in
+            if error != nil {
+                let alert = UIAlertController(title: "Unfortunately there was an error", message: "\(String(describing: error!.localizedDescription))", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.default, handler: {action in
+                    self.updateChannels()
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        })
     }
     
     func refreshData() {

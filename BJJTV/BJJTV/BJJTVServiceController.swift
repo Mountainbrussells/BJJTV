@@ -22,7 +22,7 @@ class BJJTVServiceController: NSObject {
         return Static.instance
     }
     
-    func performGetRequest(targetURL: URL!, completion: @escaping (_ data: Data?, _ HTTPStatusCode: Int, _ error: Error?) -> Void) {
+    func performGetRequest(targetURL: URL!, completion: @escaping (_ data: Data?, _ HTTPStatusCode: Int?, _ error: Error?) -> Void) {
         var request = URLRequest(url: targetURL)
         request.httpMethod = "GET"
         
@@ -31,6 +31,12 @@ class BJJTVServiceController: NSObject {
         let session = URLSession(configuration: sessionConfiguration)
         
         let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+            
+            if error != nil {
+                completion(nil, nil, error)
+                return
+            }
+            
             DispatchQueue.main.async(execute: { () -> Void in
                 completion(data, (response as! HTTPURLResponse).statusCode, error)
             })
@@ -39,7 +45,7 @@ class BJJTVServiceController: NSObject {
         task.resume()
     }
     
-    func getChannelDetails(_ useChannelIDParam: Bool) {
+    func getChannelDetails(_ useChannelIDParam: Bool, completion: @escaping (Error?) -> Void) {
         var urlString: String!
         if !useChannelIDParam {
             urlString = "https://www.googleapis.com/youtube/v3/channels?part=contentDetails,snippet&forUsername=\(desiredChannelsArray[channelIndex])&key=\(apiKey)"
@@ -51,6 +57,7 @@ class BJJTVServiceController: NSObject {
         let targetURL = URL(string: urlString)
         
         performGetRequest(targetURL: targetURL, completion: { (data, HTTPStatusCode, error) -> Void in
+            
             if HTTPStatusCode == 200 && error == nil {
                 // let resultsDict:Dictionary<String, AnyObject>
                 // Convert the JSON data to a dictionary.
@@ -83,7 +90,9 @@ class BJJTVServiceController: NSObject {
                             // Load the next channel data (if exist).
                             self.channelIndex += 1
                             if self.channelIndex < self.desiredChannelsArray.count {
-                                self.getChannelDetails(useChannelIDParam)
+                                self.getChannelDetails(useChannelIDParam, completion: { (error: Error?) -> Void in
+                                    
+                                })
                             }
                             else {
                                 NotificationCenter.default.post(name: Notification.Name("HideSpinner"), object: nil)
@@ -98,8 +107,11 @@ class BJJTVServiceController: NSObject {
                 
             }
             else {
-                print("HTTP Status Code = \(HTTPStatusCode)")
+                if let status = HTTPStatusCode {
+                    print("HTTP Status Code = \(status)")
+                }
                 print("Error while loading channel details: \(String(describing: error))")
+                completion(error)
             }
         })
     }
@@ -148,7 +160,7 @@ class BJJTVServiceController: NSObject {
                 }
             }
             else {
-                print("HTTP Status Code = \(HTTPStatusCode)")
+                print("HTTP Status Code = \(String(describing: HTTPStatusCode))")
                 print("Error while loading channel details: \(String(describing: error))")
             }
             

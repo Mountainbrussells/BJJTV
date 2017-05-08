@@ -98,7 +98,7 @@
             </objects>
             <point key="canvasLocation" x="776.79999999999995" y="689.5052473763119"/>
         </scene>
-        <!--Video List View Controller-->
+        <!--Title-->
         <scene sceneID="vrG-CC-3y0">
             <objects>
                 <viewController id="fUd-ST-2vt" customClass="BJJTVVideoListViewController" customModule="BJJTV" customModuleProvider="target" sceneMemberID="viewController">
@@ -175,7 +175,9 @@
                             <constraint firstAttribute="trailing" secondItem="p3W-Jn-m0A" secondAttribute="trailing" id="p2J-0L-l0E"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Ls4-A3-8LD"/>
                     <connections>
+                        <outlet property="navItem" destination="Ls4-A3-8LD" id="Kuu-nr-MFv"/>
                         <outlet property="tableView" destination="p3W-Jn-m0A" id="Bhb-AG-gh5"/>
                         <outlet property="viewWait" destination="xhh-CK-ph3" id="Cg0-gb-XXW"/>
                         <segue destination="yI2-Xy-8TA" kind="show" identifier="playVideoSegue" id="XHo-ZV-rXd"/>

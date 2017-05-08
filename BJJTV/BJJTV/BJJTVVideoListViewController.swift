@@ -9,6 +9,7 @@
 import UIKit
 
 class BJJTVVideoListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var navItem: UINavigationItem!
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewWait: UIView!
@@ -24,6 +25,9 @@ class BJJTVVideoListViewController: UIViewController, UITableViewDataSource, UIT
         NotificationCenter.default.addObserver(self, selector: #selector(BJJTVVideoListViewController.refreshData), name: Notification.Name("RefreshTableView"), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(BJJTVVideoListViewController.hideSpinner), name: Notification.Name("HideSpinner"), object: nil)
+        
+        let channelDetails = serviceController.channelsDataArray[selectedIndex]
+        navItem.title = channelDetails["title"] as? String
         
         // Remove all existing video details from the videosArray array.
         serviceController.videosArray.removeAll(keepingCapacity: false)
