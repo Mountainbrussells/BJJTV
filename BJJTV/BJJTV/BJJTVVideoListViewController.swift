@@ -33,7 +33,7 @@ class BJJTVVideoListViewController: UIViewController, UITableViewDataSource, UIT
         serviceController.videosArray.removeAll(keepingCapacity: false)
         
         // Fetch the video details for the tapped channel.
-        serviceController.getVideosForChannelAtIndex(index: selectedIndex)
+        self.updateVideos()
         
     }
     
@@ -73,6 +73,18 @@ class BJJTVVideoListViewController: UIViewController, UITableViewDataSource, UIT
         selectedIndex = indexPath.row
         performSegue(withIdentifier: "playVideoSegue", sender: self)
         
+    }
+    
+    func updateVideos() {
+        serviceController.getVideosForChannelAtIndex(index: selectedIndex, completion: {(error: Error?) -> Void in
+            if error != nil {
+                let alert = UIAlertController(title: "Unfortunately there was an error", message: "\(String(describing: error!.localizedDescription))", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.default, handler: {action in
+                    self.updateVideos()
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        })
     }
     
     func refreshData() {

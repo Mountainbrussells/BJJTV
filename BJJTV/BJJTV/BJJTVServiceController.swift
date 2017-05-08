@@ -117,7 +117,7 @@ class BJJTVServiceController: NSObject {
     }
 
     
-    func getVideosForChannelAtIndex(index: Int!) {
+    func getVideosForChannelAtIndex(index: Int!, completion: @escaping (Error?) -> Void) {
         // Get the selected channel's playlistID value from the channelsDataArray array and use it for fetching the proper video playlst.
         let playlistID = channelsDataArray[index]["playlistID"] as! String
         
@@ -162,6 +162,7 @@ class BJJTVServiceController: NSObject {
             else {
                 print("HTTP Status Code = \(String(describing: HTTPStatusCode))")
                 print("Error while loading channel details: \(String(describing: error))")
+                completion(error)
             }
             
             NotificationCenter.default.post(name: Notification.Name("HideSpinner"), object: nil)
