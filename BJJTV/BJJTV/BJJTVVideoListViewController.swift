@@ -16,10 +16,20 @@ class BJJTVVideoListViewController: UIViewController, UITableViewDataSource, UIT
     let serviceController = BJJTVServiceController.sharedInstance
     var selectedIndex: Int!
     
+    
+    var refreshControl: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
+        //Add refresh control
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(BJJTVVideoListViewController.refresh(sender:)), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refreshControl)
         
        
         NotificationCenter.default.addObserver(self, selector: #selector(BJJTVVideoListViewController.refreshData), name: Notification.Name("RefreshTableView"), object: nil)
@@ -87,12 +97,19 @@ class BJJTVVideoListViewController: UIViewController, UITableViewDataSource, UIT
         })
     }
     
+    func refresh(sender:AnyObject) {
+        // Code to refresh table view
+        updateVideos()
+    }
+    
     func refreshData() {
         self.tableView.reloadData()
+        
     }
     
     func hideSpinner() {
         self.viewWait.isHidden = true
+        refreshControl.endRefreshing()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
