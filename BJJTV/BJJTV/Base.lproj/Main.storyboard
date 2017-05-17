@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="154"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BPd-kE-uNJ" id="2SA-Vn-a3o">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="153.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xxa-h5-p9a">
@@ -118,7 +117,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AQG-6b-Swx" id="YF9-f1-wah">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w5F-K7-vDI">
@@ -203,17 +202,36 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8w-zL-1sw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Fr6-lo-Jxe">
+                                        <rect key="frame" x="169" y="283" width="37" height="37"/>
+                                        <color key="color" red="0.35706910060000002" green="0.33117731820000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Fr6-lo-Jxe" firstAttribute="centerY" secondItem="o8w-zL-1sw" secondAttribute="centerY" id="0dd-ax-k0S"/>
+                                    <constraint firstItem="Fr6-lo-Jxe" firstAttribute="centerX" secondItem="o8w-zL-1sw" secondAttribute="centerX" id="Y0I-O9-ncH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="o8w-zL-1sw" secondAttribute="trailing" id="0CL-6L-tUG"/>
                             <constraint firstItem="qn5-4v-zOX" firstAttribute="top" secondItem="HkD-qZ-N3S" secondAttribute="bottom" id="HPV-28-54X"/>
+                            <constraint firstItem="o8w-zL-1sw" firstAttribute="top" secondItem="tb8-Mz-Eom" secondAttribute="bottom" id="Ost-8X-Xuu"/>
                             <constraint firstItem="HkD-qZ-N3S" firstAttribute="top" secondItem="3s5-JG-DZG" secondAttribute="top" id="PRJ-aV-Di4"/>
+                            <constraint firstItem="qn5-4v-zOX" firstAttribute="top" secondItem="o8w-zL-1sw" secondAttribute="bottom" id="Pic-tL-whF"/>
                             <constraint firstAttribute="trailing" secondItem="HkD-qZ-N3S" secondAttribute="trailing" id="XA3-M1-jHC"/>
                             <constraint firstItem="HkD-qZ-N3S" firstAttribute="leading" secondItem="3s5-JG-DZG" secondAttribute="leading" id="fkm-wl-slG"/>
+                            <constraint firstItem="o8w-zL-1sw" firstAttribute="leading" secondItem="3s5-JG-DZG" secondAttribute="leading" id="zip-DD-3F9"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="playerView" destination="HkD-qZ-N3S" id="UbE-vT-cJE"/>
+                        <outlet property="waitView" destination="o8w-zL-1sw" id="ADD-83-ruC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ht0-AS-RhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
