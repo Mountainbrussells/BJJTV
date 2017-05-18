@@ -29,6 +29,12 @@
 		C91E5CE91EB9228B0083D1B9 /* BJJTVVideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CE81EB9228B0083D1B9 /* BJJTVVideoListViewController.swift */; };
 		C91E5CEA1EB9228B0083D1B9 /* BJJTVVideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CE81EB9228B0083D1B9 /* BJJTVVideoListViewController.swift */; };
 		C91E5CEB1EB9228B0083D1B9 /* BJJTVVideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91E5CE81EB9228B0083D1B9 /* BJJTVVideoListViewController.swift */; };
+		C9235EED1ECDF24300B51199 /* BJJTVRoundTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9235EEC1ECDF24300B51199 /* BJJTVRoundTimerViewController.swift */; };
+		C9235EEE1ECDF24300B51199 /* BJJTVRoundTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9235EEC1ECDF24300B51199 /* BJJTVRoundTimerViewController.swift */; };
+		C9235EEF1ECDF24300B51199 /* BJJTVRoundTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9235EEC1ECDF24300B51199 /* BJJTVRoundTimerViewController.swift */; };
+		C9235EF11ECE108100B51199 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9235EF01ECE108000B51199 /* bell.mp3 */; };
+		C9235EF21ECE108100B51199 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9235EF01ECE108000B51199 /* bell.mp3 */; };
+		C9235EF31ECE108100B51199 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9235EF01ECE108000B51199 /* bell.mp3 */; };
 		C9256C611EBCCFDB0083D4AB /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9256C601EBCCFDB0083D4AB /* UIImageViewExtensions.swift */; };
 		C9256C651EBCE8820083D4AB /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C9256C641EBCE8820083D4AB /* LaunchImage.png */; };
 		C9256C661EBCE8820083D4AB /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C9256C641EBCE8820083D4AB /* LaunchImage.png */; };
@@ -36,6 +42,12 @@
 		C95D79E71EBA8AFA00CEAC7B /* BJJTVVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95D79E61EBA8AFA00CEAC7B /* BJJTVVideoViewController.swift */; };
 		C95D79E81EBA8DE600CEAC7B /* BJJTVVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95D79E61EBA8AFA00CEAC7B /* BJJTVVideoViewController.swift */; };
 		C95D79E91EBA8DE700CEAC7B /* BJJTVVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95D79E61EBA8AFA00CEAC7B /* BJJTVVideoViewController.swift */; };
+		C966101E1ECD0D61000E94F4 /* BetterSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966101D1ECD0D61000E94F4 /* BetterSlider.swift */; };
+		C966101F1ECD0D61000E94F4 /* BetterSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966101D1ECD0D61000E94F4 /* BetterSlider.swift */; };
+		C96610201ECD0D61000E94F4 /* BetterSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C966101D1ECD0D61000E94F4 /* BetterSlider.swift */; };
+		C96610221ECD0DED000E94F4 /* UIView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96610211ECD0DED000E94F4 /* UIView+Image.swift */; };
+		C96610231ECD0DED000E94F4 /* UIView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96610211ECD0DED000E94F4 /* UIView+Image.swift */; };
+		C96610241ECD0DED000E94F4 /* UIView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96610211ECD0DED000E94F4 /* UIView+Image.swift */; };
 		C9E80A461ECCBD170071BD90 /* BJJTVTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E80A451ECCBD150071BD90 /* BJJTVTimerController.swift */; };
 		C9E80A471ECCBD180071BD90 /* BJJTVTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E80A451ECCBD150071BD90 /* BJJTVTimerController.swift */; };
 		C9E80A481ECCBD180071BD90 /* BJJTVTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E80A451ECCBD150071BD90 /* BJJTVTimerController.swift */; };
@@ -79,9 +91,13 @@
 		C91E5CE01EB7B1D00083D1B9 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 		C91E5CE41EB7B9190083D1B9 /* BJJTVServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJJTVServiceController.swift; sourceTree = "<group>"; };
 		C91E5CE81EB9228B0083D1B9 /* BJJTVVideoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJJTVVideoListViewController.swift; sourceTree = "<group>"; };
+		C9235EEC1ECDF24300B51199 /* BJJTVRoundTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJJTVRoundTimerViewController.swift; sourceTree = "<group>"; };
+		C9235EF01ECE108000B51199 /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
 		C9256C601EBCCFDB0083D4AB /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		C9256C641EBCE8820083D4AB /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage.png; path = Assets.xcassets/LaunchImage.launchimage/LaunchImage.png; sourceTree = "<group>"; };
 		C95D79E61EBA8AFA00CEAC7B /* BJJTVVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJJTVVideoViewController.swift; sourceTree = "<group>"; };
+		C966101D1ECD0D61000E94F4 /* BetterSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetterSlider.swift; sourceTree = "<group>"; };
+		C96610211ECD0DED000E94F4 /* UIView+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Image.swift"; sourceTree = "<group>"; };
 		C9E80A451ECCBD150071BD90 /* BJJTVTimerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJJTVTimerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,10 +155,14 @@
 				C91E5CAC1EB7A4780083D1B9 /* ViewController.swift */,
 				C91E5CE81EB9228B0083D1B9 /* BJJTVVideoListViewController.swift */,
 				C95D79E61EBA8AFA00CEAC7B /* BJJTVVideoViewController.swift */,
-				C91E5CE41EB7B9190083D1B9 /* BJJTVServiceController.swift */,
+				C9235EEC1ECDF24300B51199 /* BJJTVRoundTimerViewController.swift */,
 				C9256C601EBCCFDB0083D4AB /* UIImageViewExtensions.swift */,
-				C91E5CAE1EB7A4790083D1B9 /* Main.storyboard */,
+				C966101D1ECD0D61000E94F4 /* BetterSlider.swift */,
+				C96610211ECD0DED000E94F4 /* UIView+Image.swift */,
+				C91E5CE41EB7B9190083D1B9 /* BJJTVServiceController.swift */,
 				C9E80A451ECCBD150071BD90 /* BJJTVTimerController.swift */,
+				C91E5CAE1EB7A4790083D1B9 /* Main.storyboard */,
+				C9235EF01ECE108000B51199 /* bell.mp3 */,
 				C91E5CDF1EB7B1D00083D1B9 /* YTPlayerView.h */,
 				C91E5CE01EB7B1D00083D1B9 /* YTPlayerView.m */,
 				C901BB751EBA9E0100632422 /* blackbelt.png */,
@@ -287,6 +307,7 @@
 				C91E5CB51EB7A4790083D1B9 /* LaunchScreen.storyboard in Resources */,
 				C91E5CDC1EB7B1380083D1B9 /* Assets in Resources */,
 				C9256C651EBCE8820083D4AB /* LaunchImage.png in Resources */,
+				C9235EF11ECE108100B51199 /* bell.mp3 in Resources */,
 				C901BB761EBA9E0100632422 /* blackbelt.png in Resources */,
 				C91E5CB21EB7A4790083D1B9 /* Assets.xcassets in Resources */,
 				C91E5CB01EB7A4790083D1B9 /* Main.storyboard in Resources */,
@@ -300,6 +321,7 @@
 				C901BB771EBA9E0100632422 /* blackbelt.png in Resources */,
 				C91E5CDD1EB7B1380083D1B9 /* Assets in Resources */,
 				C9256C661EBCE8820083D4AB /* LaunchImage.png in Resources */,
+				C9235EF21ECE108100B51199 /* bell.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +332,7 @@
 				C901BB781EBA9E0100632422 /* blackbelt.png in Resources */,
 				C91E5CDE1EB7B1380083D1B9 /* Assets in Resources */,
 				C9256C671EBCE8820083D4AB /* LaunchImage.png in Resources */,
+				C9235EF31ECE108100B51199 /* bell.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,10 +346,13 @@
 				C9256C611EBCCFDB0083D4AB /* UIImageViewExtensions.swift in Sources */,
 				C91E5CE51EB7B9190083D1B9 /* BJJTVServiceController.swift in Sources */,
 				C9E80A461ECCBD170071BD90 /* BJJTVTimerController.swift in Sources */,
+				C966101E1ECD0D61000E94F4 /* BetterSlider.swift in Sources */,
 				C91E5CAD1EB7A4780083D1B9 /* ViewController.swift in Sources */,
 				C91E5CAB1EB7A4780083D1B9 /* AppDelegate.swift in Sources */,
+				C96610221ECD0DED000E94F4 /* UIView+Image.swift in Sources */,
 				C95D79E71EBA8AFA00CEAC7B /* BJJTVVideoViewController.swift in Sources */,
 				C91E5CE91EB9228B0083D1B9 /* BJJTVVideoListViewController.swift in Sources */,
+				C9235EED1ECDF24300B51199 /* BJJTVRoundTimerViewController.swift in Sources */,
 				C91E5CE11EB7B1D00083D1B9 /* YTPlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,8 +365,11 @@
 				C91E5CE61EB7B9190083D1B9 /* BJJTVServiceController.swift in Sources */,
 				C9E80A471ECCBD180071BD90 /* BJJTVTimerController.swift in Sources */,
 				C91E5CC01EB7A4790083D1B9 /* BJJTVTests.swift in Sources */,
+				C96610231ECD0DED000E94F4 /* UIView+Image.swift in Sources */,
+				C966101F1ECD0D61000E94F4 /* BetterSlider.swift in Sources */,
 				C95D79E81EBA8DE600CEAC7B /* BJJTVVideoViewController.swift in Sources */,
 				C91E5CEA1EB9228B0083D1B9 /* BJJTVVideoListViewController.swift in Sources */,
+				C9235EEE1ECDF24300B51199 /* BJJTVRoundTimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,8 +381,11 @@
 				C91E5CE71EB7B9190083D1B9 /* BJJTVServiceController.swift in Sources */,
 				C9E80A481ECCBD180071BD90 /* BJJTVTimerController.swift in Sources */,
 				C91E5CCB1EB7A4790083D1B9 /* BJJTVUITests.swift in Sources */,
+				C96610241ECD0DED000E94F4 /* UIView+Image.swift in Sources */,
+				C96610201ECD0D61000E94F4 /* BetterSlider.swift in Sources */,
 				C95D79E91EBA8DE700CEAC7B /* BJJTVVideoViewController.swift in Sources */,
 				C91E5CEB1EB9228B0083D1B9 /* BJJTVVideoListViewController.swift in Sources */,
+				C9235EEF1ECDF24300B51199 /* BJJTVRoundTimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
