@@ -36,6 +36,7 @@ class BJJTVRoundTimerViewController: UIViewController, BJJTVTimerControllerDeleg
         restTime = 2
         roundTime = 10
         timerRunning = false
+        // preferredInterfaceOrientationForPresentation = .portrait
         
         do
         {
@@ -45,6 +46,17 @@ class BJJTVRoundTimerViewController: UIViewController, BJJTVTimerControllerDeleg
         catch
         {
             //ERROR
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        timerController?.stopTime()
+    }
+    
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            return .portrait
         }
     }
     

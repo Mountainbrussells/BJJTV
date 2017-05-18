@@ -35,6 +35,9 @@
 		C9235EF11ECE108100B51199 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9235EF01ECE108000B51199 /* bell.mp3 */; };
 		C9235EF21ECE108100B51199 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9235EF01ECE108000B51199 /* bell.mp3 */; };
 		C9235EF31ECE108100B51199 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9235EF01ECE108000B51199 /* bell.mp3 */; };
+		C9235EFD1ECE5AA900B51199 /* UINavigationController+rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9235EFC1ECE5AA900B51199 /* UINavigationController+rotation.swift */; };
+		C9235EFE1ECE5AA900B51199 /* UINavigationController+rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9235EFC1ECE5AA900B51199 /* UINavigationController+rotation.swift */; };
+		C9235EFF1ECE5AA900B51199 /* UINavigationController+rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9235EFC1ECE5AA900B51199 /* UINavigationController+rotation.swift */; };
 		C9256C611EBCCFDB0083D4AB /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9256C601EBCCFDB0083D4AB /* UIImageViewExtensions.swift */; };
 		C9256C651EBCE8820083D4AB /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C9256C641EBCE8820083D4AB /* LaunchImage.png */; };
 		C9256C661EBCE8820083D4AB /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C9256C641EBCE8820083D4AB /* LaunchImage.png */; };
@@ -93,6 +96,7 @@
 		C91E5CE81EB9228B0083D1B9 /* BJJTVVideoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJJTVVideoListViewController.swift; sourceTree = "<group>"; };
 		C9235EEC1ECDF24300B51199 /* BJJTVRoundTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJJTVRoundTimerViewController.swift; sourceTree = "<group>"; };
 		C9235EF01ECE108000B51199 /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
+		C9235EFC1ECE5AA900B51199 /* UINavigationController+rotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+rotation.swift"; sourceTree = "<group>"; };
 		C9256C601EBCCFDB0083D4AB /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		C9256C641EBCE8820083D4AB /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage.png; path = Assets.xcassets/LaunchImage.launchimage/LaunchImage.png; sourceTree = "<group>"; };
 		C95D79E61EBA8AFA00CEAC7B /* BJJTVVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BJJTVVideoViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				C91E5CE81EB9228B0083D1B9 /* BJJTVVideoListViewController.swift */,
 				C95D79E61EBA8AFA00CEAC7B /* BJJTVVideoViewController.swift */,
 				C9235EEC1ECDF24300B51199 /* BJJTVRoundTimerViewController.swift */,
+				C9235EFC1ECE5AA900B51199 /* UINavigationController+rotation.swift */,
 				C9256C601EBCCFDB0083D4AB /* UIImageViewExtensions.swift */,
 				C966101D1ECD0D61000E94F4 /* BetterSlider.swift */,
 				C96610211ECD0DED000E94F4 /* UIView+Image.swift */,
@@ -348,6 +353,7 @@
 				C9E80A461ECCBD170071BD90 /* BJJTVTimerController.swift in Sources */,
 				C966101E1ECD0D61000E94F4 /* BetterSlider.swift in Sources */,
 				C91E5CAD1EB7A4780083D1B9 /* ViewController.swift in Sources */,
+				C9235EFD1ECE5AA900B51199 /* UINavigationController+rotation.swift in Sources */,
 				C91E5CAB1EB7A4780083D1B9 /* AppDelegate.swift in Sources */,
 				C96610221ECD0DED000E94F4 /* UIView+Image.swift in Sources */,
 				C95D79E71EBA8AFA00CEAC7B /* BJJTVVideoViewController.swift in Sources */,
@@ -362,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91E5CE21EB7B1D00083D1B9 /* YTPlayerView.m in Sources */,
+				C9235EFE1ECE5AA900B51199 /* UINavigationController+rotation.swift in Sources */,
 				C91E5CE61EB7B9190083D1B9 /* BJJTVServiceController.swift in Sources */,
 				C9E80A471ECCBD180071BD90 /* BJJTVTimerController.swift in Sources */,
 				C91E5CC01EB7A4790083D1B9 /* BJJTVTests.swift in Sources */,
@@ -378,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91E5CE31EB7B1D00083D1B9 /* YTPlayerView.m in Sources */,
+				C9235EFF1ECE5AA900B51199 /* UINavigationController+rotation.swift in Sources */,
 				C91E5CE71EB7B9190083D1B9 /* BJJTVServiceController.swift in Sources */,
 				C9E80A481ECCBD180071BD90 /* BJJTVTimerController.swift in Sources */,
 				C91E5CCB1EB7A4790083D1B9 /* BJJTVUITests.swift in Sources */,
