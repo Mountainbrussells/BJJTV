@@ -88,9 +88,7 @@ class BJJTVRoundTimerViewController: UIViewController, BJJTVTimerControllerDeleg
             countdownLabel.backgroundColor = UIColor.red
             audioPlayer.prepareToPlay()
             audioPlayer.play()
-        } else if timerController?.seconds == 28 && timerSwitch == 1 {
-            // audioPlayer.pause()
-        }
+        } 
     }
     
     func startInitialTimer() {
